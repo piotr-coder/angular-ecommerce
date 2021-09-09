@@ -3,14 +3,21 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --ssl=true --sslKey=./ssl-localhost/localhost.key --sslCert=./ssl-localhost/localhost.crt",
+    "heroku-postbuild": "ng build --prod",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.0",
+    "@angular/cli": "~12.0.0",
+    "@angular/compiler-cli": "~12.0.0",
     "@angular/common": "~12.0.0",
     "@angular/compiler": "~12.0.0",
     "@angular/core": "~12.0.0",
@@ -26,7 +33,8 @@
     "bootstrap": "^5.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "~4.2.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.0.0",
