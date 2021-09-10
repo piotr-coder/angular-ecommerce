@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  pbshopApiUrl: "https://zadanie.herokuapp.com/api"
 };
